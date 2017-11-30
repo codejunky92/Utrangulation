@@ -5,7 +5,7 @@ import static java.lang.StrictMath.toDegrees;
 public class UIntersection extends Thread
 {
     private int xUWB1 = 6, yUWB1 = 6;
-    private int xUWB2 = 13, yUWB2 = 14;
+    private int xUWB2 = 6, yUWB2 = 13;
     private int deltaX = (xUWB2-xUWB1);
     private int deltaY = (yUWB2-yUWB1);
     private double c;
@@ -13,18 +13,16 @@ public class UIntersection extends Thread
     private double userLocationPointX1, userLocationPointY1;
     private double userLocationPointX2, userLocationPointY2;
 
-
     public UIntersection()
     {
 
     }
 
-
     @Override
     public void run()
     {
-        while(true)
-        {
+        //while(true)
+        //{
             createIntersectionPoints(8, 5);
             try
             {
@@ -34,9 +32,8 @@ public class UIntersection extends Thread
             {
                 e.printStackTrace();
             }
-        }
+        //}
     }
-
 
     public void createIntersectionPoints(double rUWB1, double rUWB2)
     {
@@ -57,7 +54,6 @@ public class UIntersection extends Thread
         System.out.println("P4("+(float)userLocationPointX2+", "+(float)userLocationPointY2+")");
     }
 
-
     public double getC()
     {
         if((yUWB2-yUWB1)==0)
@@ -71,7 +67,6 @@ public class UIntersection extends Thread
 
         return c;
     }
-
 
     public double getUserLocationPointX1()
     {
